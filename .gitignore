@@ -1,0 +1,16 @@
+# Dependency directories
+node_modules
+
+### Node ###
+# Logs
+logs
+*.log
+npm-debug.log*
+
+### OSX ###
+*.DS_Store
+.AppleDouble
+.LSOverride
+
+# Vscode
+.vscode/
