@@ -7,7 +7,7 @@
         <span class="price">{{ product.price }}</span>
       </li>
     </ul>
-    <button @click="reducePrice">Reduce price</button>
+    <button @click="reducePrice(5)">Reduce price</button>
   </div>
 </template>
 
@@ -22,8 +22,8 @@ export default {
     }
   },
   methods: {
-    reducePrice() {
-      this.$store.dispatch('reducePriceAsync');
+    reducePrice(amount) {
+      this.$store.dispatch('reducePriceAsync', amount);
     }
   }
 };
