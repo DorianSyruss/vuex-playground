@@ -25,7 +25,6 @@ export const store = new Vuex.Store({
   },
   mutations: {
     reducePrice(state, amount) {
-      debugger;
       state.products.forEach(product => {
         product.price -= amount;
       });
