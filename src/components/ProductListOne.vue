@@ -7,24 +7,23 @@
         <span class="price">{{ product.price }}</span>
       </li>
     </ul>
-    <button @click="reducePrice(5)">Reduce price</button>
+    <button @click="reducePriceAsync(5)">Reduce price</button>
   </div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
+import { mapActions } from 'vuex';
+
 export default {
   computed: {
     products() {
       return this.$store.state.products;
     },
-    saleProducts() {
-      return this.$store.getters.saleProducts;
-    }
+    ...mapGetters(['saleProducts'])
   },
   methods: {
-    reducePrice(amount) {
-      this.$store.dispatch('reducePriceAsync', amount);
-    }
+    ...mapActions(['reducePriceAsync'])
   }
 };
 </script>
