@@ -1,6 +1,9 @@
 # Dependency directories
 node_modules
 
+# Configuration
+.env
+
 # Build
 dist
 
