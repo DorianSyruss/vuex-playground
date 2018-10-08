@@ -23,7 +23,7 @@ export default {
   },
   methods: {
     reducePrice() {
-      this.$store.commit('reducePrice');
+      this.$store.dispatch('reducePriceAsync');
     }
   }
 };
