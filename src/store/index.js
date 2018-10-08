@@ -4,7 +4,7 @@ import Vuex from 'vuex';
 Vue.use(Vuex);
 
 export const store = new Vuex.Store({
-  strict: true,
+  strict: process.env.NODE_ENV !== 'production',
   state: {
     products: [
       { name: 'Banana Skin', price: 20 },
@@ -25,6 +25,7 @@ export const store = new Vuex.Store({
   },
   mutations: {
     reducePrice(state, amount) {
+      debugger;
       state.products.forEach(product => {
         product.price -= amount;
       });

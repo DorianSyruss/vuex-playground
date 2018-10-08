@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "babel-preset-stage-2": "^6.24.1",
+    "dotenv": "^6.0.0",
     "node-sass": "^4.9.3",
     "sass-loader": "^7.1.0",
     "vue": "^2.5.11",
